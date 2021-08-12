@@ -10,7 +10,8 @@ exports.handler = async function http(req) {
     redirect: 'follow'
     };
         
-    const suggestions = await fetch("https://www.google.com/complete/search?q=peloton&cp=1&client=gws-wiz&xssi=t", requestOptions)
+    const response = await fetch("https://www.google.com/complete/search?q=peloton&cp=1&client=gws-wiz&xssi=t", requestOptions);
+    const suggestions = await response.text();
 
     return {
         headers: { 'content-type': 'application/json; charset=utf8' },
