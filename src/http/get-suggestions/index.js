@@ -17,6 +17,6 @@ exports.handler = async function http(req) {
     return {
         headers: { 'content-type': 'application/json; charset=utf8' },
         statusCode: 200,
-        body: JSON.stringify(suggestions)
+        body: JSON.stringify(suggestions.keys())
     }
 }
