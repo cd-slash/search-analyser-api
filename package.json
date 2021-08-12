@@ -8,7 +8,8 @@
       ["get", "/top"],
       ["get", "/questions"],
       ["get", "/competitors"],
-      ["get", "/concerns"]
+      ["get", "/concerns"],
+      ["get", "/suggestions"]
     ]
   },
   "scripts": {
