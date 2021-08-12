@@ -1,7 +1,7 @@
 exports.handler = async function http(req) {
 
     const fetch = require("node-fetch");
-    var myHeaders = new Headers();
+    var myHeaders = new fetch.Headers();
     myHeaders.append("Cookie", "CONSENT=PENDING+855");
 
     var requestOptions = {
