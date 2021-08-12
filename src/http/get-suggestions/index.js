@@ -11,7 +11,7 @@ exports.handler = async function http(req) {
     };
         
     const response = await fetch("https://www.google.com/complete/search?q=peloton&cp=1&client=gws-wiz&xssi=t", requestOptions);
-    const suggestions = await response.text();
+    const suggestions = await response.text().substring(4);
 
     return {
         headers: { 'content-type': 'application/json; charset=utf8' },
