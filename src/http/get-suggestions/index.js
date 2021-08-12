@@ -12,8 +12,9 @@ exports.handler = async function http(req) {
     let resultsJSON;
         
     fetch("https://www.google.com/complete/search?q=peloton&cp=1&client=gws-wiz&xssi=t", requestOptions)
-        .then(result => resultsJSON = result)   
-        .catch(error => console.log('error', error));
+    .then(response => response.text())
+    .then(result => resultsJSON = result)
+    .catch(error => console.log('error', error));
 
     return {
         headers: { 'content-type': 'application/json; charset=utf8' },
