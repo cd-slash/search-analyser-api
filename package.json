@@ -5,11 +5,26 @@
   "arc": {
     "app": "hello-world",
     "http": [
-      ["get", "/top"],
-      ["get", "/questions"],
-      ["get", "/competitors"],
-      ["get", "/concerns"],
-      ["get", "/suggestions"]
+      [
+        "get",
+        "/top"
+      ],
+      [
+        "get",
+        "/questions"
+      ],
+      [
+        "get",
+        "/competitors"
+      ],
+      [
+        "get",
+        "/concerns"
+      ],
+      [
+        "get",
+        "/suggestions/:seed"
+      ]
     ]
   },
   "scripts": {
@@ -20,5 +35,8 @@
     "@architect/sandbox": "^3.3.6",
     "@begin/data": "latest",
     "cross-env": "^7.0.3"
+  },
+  "dependencies": {
+    "node-fetch": "^2.6.1"
   }
 }
